@@ -11,7 +11,7 @@ generator client {
 }
 
 model User {
-  id        String    @default(cuid()) @id
+  id        String    @id @default(cuid())
   createdAt DateTime  @default(now())
   updatedAt DateTime  @default(now()) @updatedAt
   username  String    @unique
@@ -33,7 +33,7 @@ enum Role {
 }
 
 model Post {
-  id           String    @default(cuid()) @id
+  id           String    @id @default(cuid())
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @default(now()) @updatedAt
   text         String
@@ -46,7 +46,7 @@ model Post {
 }
 
 model Comment {
-  id        String   @default(cuid()) @id
+  id        String   @id @default(cuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
   text      String

@@ -491,7 +491,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/nest"
+    "defaultCollection": "@nrwl/nest",
+    "analytics": false
   },
   "schematics": {
     "@nrwl/workspace": {
