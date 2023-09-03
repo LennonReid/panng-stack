@@ -38,14 +38,6 @@
         "linter": "tslint"
       }
     },
-    "@nrwl/nest": {
-      "application": {
-        "linter": "tslint"
-      },
-      "library": {
-        "linter": "tslint"
-      }
-    },
     "@nrwl/express": {
       "application": {
         "linter": "tslint"
@@ -60,6 +52,14 @@
     },
     "@nrwl/angular:library": {
       "unitTestRunner": "jest"
+    },
+    "@nx/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
     }
   },
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
