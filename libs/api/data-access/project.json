@@ -1,0 +1,18 @@
+{
+  "name": "api-data-access",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api/data-access/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/api/data-access/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "outputs": ["coverage/libs/api/data-access"]
+    }
+  },
+  "tags": ["scope:api", "type:data-access"]
+}
