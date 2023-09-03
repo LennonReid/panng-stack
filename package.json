@@ -88,7 +88,6 @@
     "@nestjs/testing": "10.2.4",
     "@nrwl/angular": "16.7.4",
     "@nrwl/cypress": "16.7.4",
-    "@nrwl/node": "16.7.4",
     "@nxpm/stack": "^1.1.0",
     "@prisma/cli": "^2.7.1",
     "@prisma/client": "^2.7.1",
@@ -112,7 +111,8 @@
     "nx-cloud": "16.3.0",
     "@nx/jest": "16.7.4",
     "@nx/nest": "16.7.4",
-    "@nx/workspace": "16.7.4"
+    "@nx/workspace": "16.7.4",
+    "@nx/node": "16.7.4"
   },
   "husky": {
     "hooks": {

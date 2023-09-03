@@ -25,14 +25,6 @@
         "linter": "tslint"
       }
     },
-    "@nrwl/node": {
-      "application": {
-        "linter": "tslint"
-      },
-      "library": {
-        "linter": "tslint"
-      }
-    },
     "@nrwl/express": {
       "application": {
         "linter": "tslint"
@@ -57,6 +49,14 @@
       }
     },
     "@nx/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nx/node": {
+      "application": {
+        "linter": "tslint"
+      },
       "library": {
         "linter": "tslint"
       }
