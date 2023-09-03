@@ -1,5 +1,5 @@
 import { Injectable, OnModuleDestroy, OnModuleInit, Logger } from '@nestjs/common'
-import { PrismaClient, UserCreateInput } from '@prisma/client'
+import { PrismaClient, Prisma } from '@prisma/client'
 import { getGravatarUrl, hashPassword } from './api-data-access.helper'
 import { sampleUsers } from './sample-data/sample-users'
 
@@ -18,7 +18,7 @@ export class ApiDataAccessService extends PrismaClient implements OnModuleInit, 
     await this.sampleData()
   }
 
-  async createUser(input: UserCreateInput) {
+  async createUser(input: Prisma.UserCreateInput) {
     const password = await hashPassword(input.password)
 
     return this.user.create({
@@ -33,15 +33,15 @@ export class ApiDataAccessService extends PrismaClient implements OnModuleInit, 
   }
 
   public findUserByEmail(email: string) {
-    return this.user.findOne({ where: { email } })
+    return this.user.findUnique({ where: { email } })
   }
 
   public findUserById(userId: string) {
-    return this.user.findOne({ where: { id: userId } })
+    return this.user.findUnique({ where: { id: userId } })
   }
 
   public findUserByUsername(username: string) {
-    return this.user.findOne({ where: { username } })
+    return this.user.findUnique({ where: { username } })
   }
 
   private async sampleData() {

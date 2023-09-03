@@ -1,7 +1,10 @@
 import { GraphQLIntercomModule } from '@kikstart-playground/graphql-intercom'
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
+
 import { GraphQLModule } from '@nestjs/graphql'
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+
 import { PubSub } from 'graphql-subscriptions'
 
 import { configuration } from './config/configuration'
@@ -17,7 +20,8 @@ import { ApiFeatureCoreService } from './api-feature-core.service'
       load: [configuration],
       validationSchema,
     }),
-    GraphQLModule.forRoot({
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+      driver: ApolloDriver,
       autoSchemaFile: true,
       installSubscriptionHandlers: true,
     }),
