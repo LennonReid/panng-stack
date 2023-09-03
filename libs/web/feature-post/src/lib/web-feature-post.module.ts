@@ -14,17 +14,16 @@ import { WebFeaturePostService } from './web-feature-post.service'
 const routes: Routes = [{ path: '', component: PostIndexComponent }]
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    ModalModule.forRoot(),
-    WebDataAccessAuthModule,
-    UiCardModule,
-    UiCommentModule,
-    UiLoadingModule,
-  ],
-  providers: [BsModalService, WebFeaturePostService],
-  declarations: [PostIndexComponent, PostModalComponent],
-  entryComponents: [PostModalComponent],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        ModalModule.forRoot(),
+        WebDataAccessAuthModule,
+        UiCardModule,
+        UiCommentModule,
+        UiLoadingModule,
+    ],
+    providers: [BsModalService, WebFeaturePostService],
+    declarations: [PostIndexComponent, PostModalComponent]
 })
 export class WebFeaturePostModule {}
