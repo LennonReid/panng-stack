@@ -1,4 +1,4 @@
-import { GraphQLIntercomModule } from '@kikstart-playground/graphql-intercom'
+import { GraphQLIntercomModule } from '@angular-graphql/api/graphql-intercom'
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 

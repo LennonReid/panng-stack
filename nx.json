@@ -29,10 +29,13 @@
       }
     },
     "@nx/angular:application": {
+      "style": "css",
+      "linter": "eslint",
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
     "@nx/angular:library": {
+      "linter": "eslint",
       "unitTestRunner": "jest"
     },
     "@nx/nest": {
@@ -60,6 +63,9 @@
       "cypress-project": {
         "linter": "tslint"
       }
+    },
+    "@nx/angular:component": {
+      "style": "css"
     }
   },
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
@@ -73,6 +79,9 @@
     },
     "e2e": {
       "inputs": ["default", "^production"]
+    },
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json", "{workspaceRoot}/.eslintignore"]
     }
   },
   "namedInputs": {
@@ -88,7 +97,8 @@
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
-      "!{projectRoot}/src/test-setup.[jt]s"
+      "!{projectRoot}/src/test-setup.[jt]s",
+      "!{projectRoot}/.eslintrc.json"
     ]
   }
 }

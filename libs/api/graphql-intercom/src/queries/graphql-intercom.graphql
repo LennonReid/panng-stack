@@ -1,0 +1,16 @@
+fragment IntercomMessageDetails on IntercomMessage {
+  type
+  scope
+  payload
+}
+mutation IntercomPub($type:String! $scope: String $payload: JSON) {
+  intercomPub(type: $type scope: $scope payload: $payload) {
+    ...IntercomMessageDetails
+  }
+}
+
+subscription IntercomSub($type:String $scope: String) {
+  intercomSub(type: $type scope: $scope) {
+    ...IntercomMessageDetails
+  }
+}

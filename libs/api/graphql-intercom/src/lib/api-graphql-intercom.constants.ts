@@ -1,0 +1,1 @@
+export const INTERCOM_PUB_SUB = 'INTERCOM_PUB_SUB';

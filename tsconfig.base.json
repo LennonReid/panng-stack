@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@angular-graphql/api/data-access": ["libs/api/data-access/src/index.ts"],
+      "@angular-graphql/api/graphql-intercom": ["libs/api/graphql-intercom/src/index.ts"],
       "@angular-graphql/api/feature-auth": ["libs/api/feature-auth/src/index.ts"],
       "@angular-graphql/api/feature-comment": ["libs/api/feature-comment/src/index.ts"],
       "@angular-graphql/api/feature-core": ["libs/api/feature-core/src/index.ts"],
