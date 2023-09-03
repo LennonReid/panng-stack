@@ -6,7 +6,7 @@
   "prefix": "data-access",
   "targets": {
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "libs/web/data-access/jest.config.ts",
         "passWithNoTests": true
