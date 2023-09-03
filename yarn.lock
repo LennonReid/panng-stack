@@ -13686,15 +13686,17 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
+ngx-bootstrap@^11.0.2:
+  version "11.0.2"
+  resolved "https://registry.npmjs.org/ngx-bootstrap/-/ngx-bootstrap-11.0.2.tgz#ed1d0e254ef16ba8245cd9a3450404dc81aabef6"
+  integrity sha512-McvQ72XB6692Jus47jahWWwjpSCa6EtHMIqoyMewKCEHMv0ybDgVnOAdEsWKvwfulowHn7Y/jDjeiURwYJG9cQ==
+  dependencies:
+    tslib "^2.3.0"
+
 ngx-bootstrap@^5.6.1:
   version "5.6.2"
   resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-5.6.2.tgz#e648f826d303c29255c16772676efd30695740d1"
   integrity sha512-6YHXtdXkGH3w0NQoaUgNYAcrj064Lv5RTO284ha/hvpNTrh55yQz2cVh0VvwBk3MjyY2tdmLH4SuCJDszYdYiw==
-
-ngx-bootstrap@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-6.1.0.tgz#f1f923c7d3879b80b9501a45b3d21f2589967fff"
-  integrity sha512-IDHPO3WE7YYhLZ7jnrH1wmMORhthoyHn6Gbl27FvXksG0OlTm5x8CyK5+EQfnDfxBEElju8n4Tfb8ga3aJYFTA==
 
 ngx-markdown@^10.0.0:
   version "10.1.1"
