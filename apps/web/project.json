@@ -84,7 +84,7 @@
         "jestConfig": "apps/web/jest.config.ts",
         "passWithNoTests": true
       },
-      "outputs": ["coverage/apps/web"]
+      "outputs": ["{workspaceRoot}/coverage/apps/web"]
     }
   },
   "tags": []

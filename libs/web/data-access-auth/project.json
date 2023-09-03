@@ -11,7 +11,7 @@
         "jestConfig": "libs/web/data-access-auth/jest.config.ts",
         "passWithNoTests": true
       },
-      "outputs": ["coverage/libs/web/data-access-auth"]
+      "outputs": ["{workspaceRoot}/coverage/libs/web/data-access-auth"]
     }
   },
   "generators": {

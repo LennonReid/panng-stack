@@ -11,7 +11,7 @@
         "jestConfig": "libs/web/feature-auth/jest.config.ts",
         "passWithNoTests": true
       },
-      "outputs": ["coverage/libs/web/feature-auth"]
+      "outputs": ["{workspaceRoot}/coverage/libs/web/feature-auth"]
     }
   },
   "generators": {
