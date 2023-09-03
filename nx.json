@@ -20,11 +20,6 @@
   },
   "defaultProject": "api",
   "generators": {
-    "@nrwl/cypress": {
-      "cypress-project": {
-        "linter": "tslint"
-      }
-    },
     "@nrwl/express": {
       "application": {
         "linter": "tslint"
@@ -58,6 +53,11 @@
         "linter": "tslint"
       },
       "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nx/cypress": {
+      "cypress-project": {
         "linter": "tslint"
       }
     }
