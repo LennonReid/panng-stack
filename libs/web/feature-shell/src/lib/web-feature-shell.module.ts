@@ -27,29 +27,32 @@ import { NotFoundComponent } from './components/not-found.component'
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: AppLayoutComponent,
-        children: [
-          { path: '', pathMatch: 'full', redirectTo: '/posts' },
-          {
-            path: 'posts',
-            loadChildren: () => import('@angular-graphql/web/feature-post').then((m) => m.WebFeaturePostModule),
-          },
-          {
-            path: 'profiles',
-            loadChildren: () => import('@angular-graphql/web/feature-profile').then((m) => m.WebFeatureProfileModule),
-          },
-          { path: '404', component: NotFoundComponent },
-        ],
-      },
-      {
-        path: '',
-        loadChildren: () => import('@angular-graphql/web/feature-auth').then((m) => m.WebFeatureAuthModule),
-      },
-      { path: '**', pathMatch: 'full', redirectTo: '/404' },
-    ]),
+    RouterModule.forRoot(
+      [
+        {
+          path: '',
+          component: AppLayoutComponent,
+          children: [
+            { path: '', pathMatch: 'full', redirectTo: '/posts' },
+            {
+              path: 'posts',
+              loadChildren: () => import('@angular-graphql/web/feature-post').then((m) => m.WebFeaturePostModule),
+            },
+            {
+              path: 'profiles',
+              loadChildren: () => import('@angular-graphql/web/feature-profile').then((m) => m.WebFeatureProfileModule),
+            },
+            { path: '404', component: NotFoundComponent },
+          ],
+        },
+        {
+          path: '',
+          loadChildren: () => import('@angular-graphql/web/feature-auth').then((m) => m.WebFeatureAuthModule),
+        },
+        { path: '**', pathMatch: 'full', redirectTo: '/404' },
+      ],
+      { relativeLinkResolution: 'legacy' },
+    ),
     WebFeatureCoreModule,
     WebDataAccessAuthModule,
     BsDropdownModule.forRoot(),

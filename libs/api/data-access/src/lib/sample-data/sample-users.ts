@@ -1,8 +1,9 @@
-import { UserCreateInput } from '@prisma/client'
-
+import { Prisma } from '@prisma/client'
 const password = '$2b$10$dqyYw5XovLjpmkYNiRDEWuwKaRAvLaG45fnXE5b3KTccKZcRPka2m' // "secret42",
 
-export const sampleUsers: UserCreateInput[] = [
+// https://stackoverflow.com/questions/71856568/nestjs-prisma-client-unable-to-import-generated-types
+
+export const sampleUsers: Prisma.UserCreateInput[] = [
   {
     id: 'summer',
     username: 'summer',

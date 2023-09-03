@@ -1,3 +1,13 @@
+# TODO:
+
+* [ ]  UI dependencies update
+```bash
+
+    "@kikstart-ui/layout-web": "^2.2.0",
+    "@kikstart-ui/themes": "^2.2.0",
+``` 
+
+
 **Requirements**
 
 - [Node <=v14](https://nodejs.org/)
@@ -28,6 +38,7 @@ npm run sdk
 ---
 
 ```bash
-# Start the both Nest API and Angular app
-npm run start:dev
+# Start the both Nest API and Angular app -- run Backend server until the frontend issues resolved
+# npm run start:dev
+npp run dev:api
 ```

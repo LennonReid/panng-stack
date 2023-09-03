@@ -3,76 +3,102 @@
   "affected": {
     "defaultBase": "master"
   },
-  "implicitDependencies": {
-    "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    "tsconfig.base.json": "*",
-    "tslint.json": "*",
-    "nx.json": "*"
-  },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "nx-cloud",
       "options": {
         "accessToken": "YTE1ODUwMzUtYmVkMi00OGY1LWFmYmMtYzBlM2E3Y2EyZGYwfHJlYWQtd3JpdGU=",
         "cacheableOperations": ["build", "test", "lint", "e2e"],
         "canTrackAnalytics": false,
-        "showUsageWarnings": true
+        "showUsageWarnings": true,
+        "parallel": 1
       }
     }
   },
-  "projects": {
-    "api": {
-      "tags": []
+  "cli": {
+    "analytics": false
+  },
+  "defaultProject": "api",
+  "generators": {
+    "@nrwl/express": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
     },
-    "api-data-access": {
-      "tags": ["scope:api", "type:data-access"]
+    "@nx/angular:application": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
     },
-    "api-feature-core": {
-      "tags": ["scope:api", "type:feature"]
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
     },
-    "api-feature-auth": {
-      "tags": ["scope:api", "type:feature"]
+    "@nx/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
     },
-    "web": {
-      "tags": []
+    "@nx/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
     },
-    "web-e2e": {
-      "tags": [],
-      "implicitDependencies": ["web"]
+    "@nx/node": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
     },
-    "web-data-access": {
-      "tags": ["scope:web", "type:data-access"]
+    "@nx/cypress": {
+      "cypress-project": {
+        "linter": "tslint"
+      }
     },
-    "web-feature-shell": {
-      "tags": ["scope:web", "type:feature"]
-    },
-    "web-feature-auth": {
-      "tags": ["scope:web", "type:feature"]
-    },
-    "api-feature-post": {
-      "tags": ["scope:api", "type:feature"]
-    },
-    "api-feature-comment": {
-      "tags": ["scope:api", "type:feature"]
-    },
-    "api-feature-profile": {
-      "tags": ["scope:api", "type:feature"]
-    },
-    "web-feature-core": {
-      "tags": ["scope:web", "type:feature"]
-    },
-    "web-feature-post": {
-      "tags": ["scope:web", "type:feature"]
-    },
-    "web-feature-profile": {
-      "tags": ["scope:web", "type:feature"]
-    },
-    "web-data-access-auth": {
-      "tags": ["scope:web", "type:data-access"]
+    "@nx/angular:component": {
+      "style": "css"
     }
+  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "test": {
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
+    },
+    "e2e": {
+      "inputs": ["default", "^production"]
+    },
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json", "{workspaceRoot}/.eslintignore"]
+    }
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": [
+      "{workspaceRoot}/angular.json",
+      "{workspaceRoot}/tsconfig.base.json",
+      "{workspaceRoot}/tslint.json",
+      "{workspaceRoot}/nx.json"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/src/test-setup.[jt]s",
+      "!{projectRoot}/.eslintrc.json"
+    ]
   }
 }
