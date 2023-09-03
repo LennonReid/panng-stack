@@ -91,7 +91,6 @@
     "@nrwl/jest": "16.7.4",
     "@nrwl/nest": "16.7.4",
     "@nrwl/node": "16.7.4",
-    "@nrwl/nx-cloud": "16.3.0",
     "@nrwl/workspace": "16.7.4",
     "@nxpm/stack": "^1.1.0",
     "@prisma/cli": "^2.7.1",
@@ -112,7 +111,8 @@
     "tslint": "6.1.3",
     "typescript": "5.1.6",
     "nx": "16.7.4",
-    "jest-environment-jsdom": "28.1.3"
+    "jest-environment-jsdom": "28.1.3",
+    "nx-cloud": "16.3.0"
   },
   "husky": {
     "hooks": {
