@@ -28,7 +28,8 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@nrwl/node:execute",
@@ -48,7 +49,8 @@
           "options": {
             "jestConfig": "apps/api/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/apps/api"]
         }
       }
     },
@@ -70,7 +72,8 @@
           "options": {
             "jestConfig": "libs/api/data-access/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/api/data-access"]
         }
       }
     },
@@ -92,7 +95,8 @@
           "options": {
             "jestConfig": "libs/api/feature-core/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/api/feature-core"]
         }
       }
     },
@@ -114,7 +118,8 @@
           "options": {
             "jestConfig": "libs/api/feature-auth/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/api/feature-auth"]
         }
       }
     },
@@ -154,7 +159,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -172,7 +176,8 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": ["{options.outputPath}"]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -203,7 +208,8 @@
           "options": {
             "jestConfig": "apps/web/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/apps/web"]
         }
       }
     },
@@ -252,7 +258,8 @@
           "options": {
             "jestConfig": "libs/web/data-access/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/web/data-access"]
         }
       },
       "schematics": {
@@ -279,7 +286,8 @@
           "options": {
             "jestConfig": "libs/web/feature-shell/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/web/feature-shell"]
         }
       },
       "schematics": {
@@ -306,7 +314,8 @@
           "options": {
             "jestConfig": "libs/web/feature-auth/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/web/feature-auth"]
         }
       },
       "schematics": {
@@ -333,7 +342,8 @@
           "options": {
             "jestConfig": "libs/api/feature-post/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/api/feature-post"]
         }
       }
     },
@@ -355,7 +365,8 @@
           "options": {
             "jestConfig": "libs/api/feature-comment/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/api/feature-comment"]
         }
       }
     },
@@ -377,7 +388,8 @@
           "options": {
             "jestConfig": "libs/api/feature-profile/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/api/feature-profile"]
         }
       }
     },
@@ -399,7 +411,8 @@
           "options": {
             "jestConfig": "libs/web/feature-core/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/web/feature-core"]
         }
       },
       "schematics": {
@@ -426,7 +439,8 @@
           "options": {
             "jestConfig": "libs/web/feature-post/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/web/feature-post"]
         }
       },
       "schematics": {
@@ -453,7 +467,8 @@
           "options": {
             "jestConfig": "libs/web/feature-profile/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/web/feature-profile"]
         }
       },
       "schematics": {
@@ -480,7 +495,8 @@
           "options": {
             "jestConfig": "libs/web/data-access-auth/jest.config.js",
             "passWithNoTests": true
-          }
+          },
+          "outputs": ["coverage/libs/web/data-access-auth"]
         }
       },
       "schematics": {

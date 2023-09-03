@@ -1,10 +1,7 @@
 module.exports = {
-  name: 'api-feature-profile',
-  preset: '../../../jest.config.js',
+  preset: '../../../jest.preset.js',
   globals: {
-    'ts-jest': {
-      tsConfig: '<rootDir>/tsconfig.spec.json',
-    },
+    'ts-jest': { tsconfig: '<rootDir>/tsconfig.spec.json' },
   },
   testEnvironment: 'node',
   transform: {
@@ -12,4 +9,5 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../coverage/libs/api/feature-profile',
+  displayName: 'api-feature-profile',
 }
