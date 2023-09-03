@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   preset: '../../../jest.preset.js',
   globals: {
@@ -8,6 +9,6 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/libs/api/feature-core',
-  displayName: 'api-feature-core',
+  coverageDirectory: '../../../coverage/libs/api/data-access',
+  displayName: 'api-data-access',
 }

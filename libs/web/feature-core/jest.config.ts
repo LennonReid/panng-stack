@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
@@ -8,9 +9,9 @@ module.exports = {
       tsconfig: '<rootDir>/tsconfig.spec.json',
     },
   },
-  coverageDirectory: '../../../coverage/libs/web/data-access-auth',
+  coverageDirectory: '../../../coverage/libs/web/feature-core',
 
-  displayName: 'web-data-access-auth',
+  displayName: 'web-feature-core',
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',

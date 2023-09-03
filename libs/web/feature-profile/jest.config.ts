@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
@@ -8,9 +9,9 @@ module.exports = {
       tsconfig: '<rootDir>/tsconfig.spec.json',
     },
   },
-  coverageDirectory: '../../../coverage/libs/web/feature-shell',
+  coverageDirectory: '../../../coverage/libs/web/feature-profile',
 
-  displayName: 'web-feature-shell',
+  displayName: 'web-feature-profile',
   snapshotSerializers: [
     'jest-preset-angular/build/serializers/no-ng-attributes',
     'jest-preset-angular/build/serializers/ng-snapshot',
